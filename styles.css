@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #ecf0f1;
+    background: #0f0c29;
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(44, 62, 80, 0.8);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.7);
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+#map {
+    flex: 2;
+    height: calc(100vh - 130px);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+}
+
+#story-panel {
+    flex: 1;
+    padding: 2rem;
+    background-color: rgba(44, 62, 80, 0.8);
+    overflow-y: auto;
+    border-radius: 10px;
+    margin-left: 1rem;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
+}
+
+#location-title {
+    margin-bottom: 1rem;
+    color: #3498db;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    text-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
+}
+
+#story-content {
+    margin-bottom: 1rem;
+}
+
+#story-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+footer {
+    background-color: rgba(52, 73, 94, 0.8);
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    #map {
+        height: 50vh;
+    }
+
+    #story-panel {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
