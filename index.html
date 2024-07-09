@@ -16,14 +16,17 @@
         <main>
             <div id="map-container">
                 <div id="map"></div>
-                <div id="cosmic-energy-meter">
-                    <div id="energy-bar"></div>
-                </div>
             </div>
             <div id="story-panel">
                 <h2 id="location-title">Initiate Your Cosmic Journey</h2>
                 <div id="story-content">
                     <p>The multiverse awaits your exploration...</p>
+                </div>
+                <div id="mini-game" class="hidden">
+                    <h3>Cosmic Challenge</h3>
+                    <p id="challenge-description"></p>
+                    <input type="text" id="challenge-input" placeholder="Enter your answer">
+                    <button id="submit-challenge">Submit</button>
                 </div>
                 <div id="interaction-panel">
                     <button id="collect-artifact" class="hidden">Collect Artifact</button>
@@ -33,13 +36,14 @@
                     <button id="prev-btn" disabled><i class="fas fa-chevron-left"></i> Previous</button>
                     <button id="next-btn"><i class="fas fa-chevron-right"></i> Next</button>
                 </div>
+                <div id="progress-container"><div id="progress-bar"></div></div>
             </div>
         </main>
         <footer>
             <p>&copy; 2024 Stellar Odyssey. Traverse the multiverse responsibly.</p>
         </footer>
     </div>
-    
+
     <div id="modal" class="hidden">
         <div id="modal-content">
             <h2 id="modal-title"></h2>
